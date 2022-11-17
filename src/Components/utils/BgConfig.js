@@ -2,7 +2,7 @@ export const config = {
   autoPlay: true,
   background: {
     color: {
-      value: "##FEE"
+      value: "#000"
     },
     image: "",
     position: "",
@@ -14,7 +14,7 @@ export const config = {
     composite: "destination-out",
     cover: {
       color: {
-        value: "##FEE"
+        value: "#fff"
       },
       opacity: 1
     },
@@ -353,7 +353,36 @@ export const config = {
       }
     },
     stroke: {
-      width: 0
+      width: 0,
+      color: {
+        value: "",
+        animation: {
+          h: {
+            count: 0,
+            enable: false,
+            offset: 0,
+            speed: 0,
+            decay: 0,
+            sync: false
+          },
+          s: {
+            count: 0,
+            enable: false,
+            offset: 0,
+            speed: 1,
+            decay: 0,
+            sync: true
+          },
+          l: {
+            count: 0,
+            enable: false,
+            offset: 0,
+            speed: 1,
+            decay: 0,
+            sync: true
+          }
+        }
+      }
     },
     zIndex: {
       random: {
@@ -544,7 +573,7 @@ export const config = {
     },
     rate: {
       quantity: 1,
-      delay: 0.25
+      delay: .5
     },
     shape: "square",
     startCount: 0,
