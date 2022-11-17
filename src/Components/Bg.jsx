@@ -1,7 +1,7 @@
 import React, { useCallback, useMemo } from "react";
 import Particles from "react-tsparticles";
 import { loadPolygonPath } from "tsparticles-path-polygon";
-import { config } from "./BgConfig";
+import { config } from "./utils/BgConfig";
 
 const Bg = () => {
   const options = useMemo(() => {
@@ -12,7 +12,7 @@ const Bg = () => {
     await loadPolygonPath(engine);
   }, []);
 
-  return <Particles init={particlesInit} options={options} id="tsparticles" />;
+  return <Particles init={particlesInit} options={options} className="tsparticles" />;
 };
 
 export default Bg;

@@ -2,7 +2,7 @@ export const config = {
   autoPlay: true,
   background: {
     color: {
-      value: "#000"
+      value: "##FEE"
     },
     image: "",
     position: "",
@@ -14,7 +14,7 @@ export const config = {
     composite: "destination-out",
     cover: {
       color: {
-        value: "#fff"
+        value: "##FEE"
       },
       opacity: 1
     },
@@ -194,7 +194,7 @@ export const config = {
       }
     },
     color: {
-      value: "#dee0de",
+      value: "#DECBB7",
       animation: {
         h: {
           count: 0,
