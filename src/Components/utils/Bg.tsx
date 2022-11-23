@@ -39,7 +39,7 @@ const Bg = () => {
     <ParticleImage
       src={s}
       width={Number(innerWidth) }
-      height={Number(innerHeight) / 1.7}
+      height={Number(innerHeight) / 1.5}
       scale={0.75}
       entropy={20}
       maxParticles={4000}

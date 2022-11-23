@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className={"sticky bg-[#250618] h-16 sm:h-20 z-[100] top-0"}>
+    <div className="sticky bg-[#250618] h-16 sm:h-20 z-[100] top-0">
       <div className=" sm:hidden absolute top-0 w-full flex justify-between ">
         <Link to="/">
           {" "}

@@ -3,14 +3,12 @@ import About from "../About";
 import Hero from "../Hero";
 import Projects from "../Projects";
 
-
 const Home = () => {
   return (
-    <div className="">
-      <Hero/>
+    <div>
+      <Hero />
+      <Projects />
       <About />
-      <Projects/>
-
     </div>
   );
 };
