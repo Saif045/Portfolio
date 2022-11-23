@@ -11,7 +11,6 @@ function App() {
       <Router>
         <ScrollToTop />
         <Header />
-        <Bg />
 
         <Routes>
 

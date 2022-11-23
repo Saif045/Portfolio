@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <div className="">
       <p className="flex justify-center text-2xl">Projects</p>
-      <div className="grid grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
+      <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
         {data.map((a, i) => (
           <div className="border" key={i}>
             <div>

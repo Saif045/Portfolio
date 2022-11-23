@@ -39,15 +39,15 @@ const Bg = () => {
     <ParticleImage
       src={s}
       width={Number(innerWidth)}
-      height={Number(innerHeight)}
+      height={Number(innerHeight) / 1.7}
       scale={0.75}
       entropy={20}
       maxParticles={4000}
       particleOptions={options}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
-      backgroundColor="#ffffff00"
-      className="absolute right-0 tsparticles"
+      backgroundColor="ffffff00"
+      className="particles -z-50 sm:z-50"
     />
   );
 };
