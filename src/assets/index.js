@@ -4,4 +4,19 @@ import rreact from "./React.png";
 import room from "./room.png";
 import SunnySide from "./SunnySide.png";
 
-export { foods, netflix, rreact, room, SunnySide };
+import hollowknight from "./hollowknight.svg";
+import smalldeer from "./smalldeer.svg";
+import s from "./s.png";
+import ss from "./ss.svg";
+
+export {
+  foods,
+  netflix,
+  rreact,
+  room,
+  SunnySide,
+  hollowknight,
+  smalldeer,
+  s,
+  ss,
+};
