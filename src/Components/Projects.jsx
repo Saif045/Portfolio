@@ -10,7 +10,7 @@ const Projects = () => {
         {data.map((a, i) => (
           <div className="border" key={i}>
             <div>
-              <img className="w-full h-full" src={a} />
+              <img className="w-full h-full" src={a} alt={i}/>
 
               <h1> Netflix </h1>
               <p>this is a website dedicated to show off my skills</p>
