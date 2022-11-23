@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { foods, netflix, rreact, room, SunnySide } from "../assets/index";
 
 const Projects = () => {
-  const data = [netflix, rreact, SunnySide, room, foods]
+  const [data, setData] = useState([netflix, rreact, SunnySide, room, foods]) 
   return (
     <div className="">
       <p className="flex justify-center text-2xl">Projects</p>
