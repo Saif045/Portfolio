@@ -1,8 +1,8 @@
-import foods from "./foods.png";
-import netflix from "./netflix.png";
-import rreact from "./React.png";
-import room from "./room.png";
-import SunnySide from "./SunnySide.png";
+import foods from "./foods.PNG";
+import netflix from "./netflix.PNG";
+import rreact from "./React. PNG";
+import room from "./room.PNG";
+import SunnySide from "./SunnySide.PNG";
 
 import hollowknight from "./hollowknight.svg";
 import smalldeer from "./smalldeer.svg";
