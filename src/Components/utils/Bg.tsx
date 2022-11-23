@@ -6,7 +6,7 @@ import ParticleImage, {
   forces,
   ParticleForce,
 } from "react-particle-image";
-import { s } from "../assets/index";
+import { s } from "../../assets/index";
 
 const particleOptions: ParticleOptions = {
   filter: ({ x, y, image }) => {
@@ -38,7 +38,7 @@ const Bg = () => {
   return (
     <ParticleImage
       src={s}
-      width={Number(innerWidth)}
+      width={Number(innerWidth) }
       height={Number(innerHeight) / 1.7}
       scale={0.75}
       entropy={20}
