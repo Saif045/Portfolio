@@ -6,7 +6,7 @@ import ParticleImage, {
   forces,
   ParticleForce,
 } from "react-particle-image";
-import { me } from "../../assets/index";
+import { anubis } from "../../assets/index";
 
 const particleOptions: ParticleOptions = {
   filter: ({ x, y, image }) => {
@@ -37,10 +37,10 @@ const Bg = () => {
 
   return (
     <ParticleImage
-      src="https://pixabay.com/get/gb9d8fed782a3d516dcb7f27f15ca336b09e899f877d99c1a824f9153798f422de5dcdc89792bc54e681e065d2cb2acbe7444406fe9550e897d37bf62764e048c_1280.png"
+      src={anubis}
       width={Number(innerWidth) }
       height={Number(innerHeight) / 1.5}
-      scale={0.25}
+      scale={0.2}
       entropy={5}
       maxParticles={6000}
       particleOptions={options}
