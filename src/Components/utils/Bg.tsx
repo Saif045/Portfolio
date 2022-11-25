@@ -40,7 +40,7 @@ const Bg = () => {
       src={anubis}
       width={Number(innerWidth) }
       height={Number(innerHeight) / 1.5}
-      scale={0.2}
+      scale={0.17}
       entropy={5}
       maxParticles={5000}
       particleOptions={options}
