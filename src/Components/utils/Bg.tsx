@@ -8,6 +8,12 @@ import ParticleImage, {
 } from "react-particle-image";
 import { anubis } from "../../assets/index";
 
+// Round number up to nearest step for better canvas performance
+const round = (n: number, step = 20) => Math.ceil(n / step) * step;
+
+// Try making me lower to see how performance degrades
+const STEP = 30;
+
 const particleOptions: ParticleOptions = {
   filter: ({ x, y, image }) => {
     // Get pixel
@@ -15,7 +21,19 @@ const particleOptions: ParticleOptions = {
     // Make a particle for this pixel if blue > 50 (range 0-255)
     return pixel.b > 50;
   },
-  color: ({ x, y, image }) => "#ffffff",
+  color: ({ x, y, image }) => {
+    const pixel = image.get(x, y);
+    // Canvases are much more performant when painting as few colors as possible.
+    // Use color of pixel as color for particle however round to nearest 30
+    // to decrease the number of unique colors painted on the canvas.
+    // You'll notice if we remove this rounding, the framerate will slow down a lot.
+    return `rgba(
+      ${round(pixel.r, STEP)}, 
+      ${round(pixel.g, STEP)}, 
+      ${round(pixel.b, STEP)}, 
+      ${round(pixel.a, STEP) / 255}
+    )`;
+  },
   radius: () => Math.random() * 1.5 + 0.5,
   mass: () => 40,
   friction: () => 0.15,
@@ -38,7 +56,7 @@ const Bg = () => {
   return (
     <ParticleImage
       src={anubis}
-      width={Number(innerWidth) }
+      width={Number(innerWidth)}
       height={Number(innerHeight) / 1.5}
       scale={0.17}
       entropy={5}
