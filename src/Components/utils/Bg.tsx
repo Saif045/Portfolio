@@ -42,7 +42,7 @@ const Bg = () => {
       height={Number(innerHeight) / 1.5}
       scale={0.2}
       entropy={5}
-      maxParticles={6000}
+      maxParticles={5000}
       particleOptions={options}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
