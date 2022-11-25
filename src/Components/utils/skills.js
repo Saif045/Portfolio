@@ -10,5 +10,6 @@ export const list = [
   "Next js",
   "Typescript",
   "SSR",
+  "Framer Motion",
   "More Data Structures and Algorithms",
 ];
