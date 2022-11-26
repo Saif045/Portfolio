@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@rooks/use-window-size": "^4.11.2",
     "framer-motion": "^7.6.12",
     "node-sass": "^8.0.0",

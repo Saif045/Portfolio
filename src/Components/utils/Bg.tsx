@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import useWindowSize from "@rooks/use-window-size";
 import ParticleImage, {
   ParticleOptions,
@@ -56,16 +56,20 @@ const Bg = () => {
   return (
     <ParticleImage
       src={anubis}
-      width={Number(innerWidth)}
-      height={Number(innerHeight) / 1.5}
-      scale={0.17}
+      width={
+        Number(innerWidth) < 640 ? Number(innerWidth)  : Number(innerWidth) / 2
+      }
+      height={
+        Number(innerWidth) < 640 ? Number(innerHeight) / 1.5 : Number(innerHeight) 
+      }
+      scale={  Number(innerWidth) < 640 ? 0.15 : 0.2}
       entropy={5}
       maxParticles={5000}
       particleOptions={options}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
       backgroundColor="ffffff00"
-      className="particles -z-50 sm:z-40"
+      className="flex p-0 m-0 mb-4"
     />
   );
 };

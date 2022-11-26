@@ -4,7 +4,7 @@ import { data } from "../assets/data";
 const Projects = () => {
   return (
     <div className="">
-      <p className="flex justify-center text-2xl">Projects</p>
+      <p className="flex justify-center text-2xl mb-10">Projects</p>
       <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
         {data.map((site, i) => (
           <div className="border relative pb-12" key={i}>
