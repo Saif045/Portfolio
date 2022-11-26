@@ -64,7 +64,7 @@ const Bg = () => {
           ? Number(innerHeight) / 1.5
           : Number(innerHeight)
       }
-      scale={Number(innerWidth) < 640 ? 0.4 : 0.5}
+      scale={Number(innerWidth) < 640 ? 0.35 : 0.5}
       entropy={ Number(innerWidth) < 640 ? 1 : 3}
       maxParticles={ Number(innerWidth) < 640 ? 3500 : 5000}
       particleOptions={options}
