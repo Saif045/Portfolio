@@ -27,7 +27,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}>
+          transition={{ duration: 1 ,delay:1}}>
           {p1.map((letter, index) => {
             return (
               <TextSpan key={index}>
@@ -39,7 +39,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.6 }}>
+          transition={{ duration: 1.6 ,delay:2}}>
           {" "}
           {p2.map((letter, index) => {
             return (
@@ -52,7 +52,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}>
+          transition={{ duration: 2 ,delay:3}}>
           {p3.map((letter, index) => {
             return (
               <TextSpan key={index}>
