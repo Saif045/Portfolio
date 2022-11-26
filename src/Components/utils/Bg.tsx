@@ -57,12 +57,14 @@ const Bg = () => {
     <ParticleImage
       src={anubis}
       width={
-        Number(innerWidth) < 640 ? Number(innerWidth)  : Number(innerWidth) / 2
+        Number(innerWidth) < 640 ? Number(innerWidth) : Number(innerWidth) / 2
       }
       height={
-        Number(innerWidth) < 640 ? Number(innerHeight) / 1.5 : Number(innerHeight) 
+        Number(innerWidth) < 640
+          ? Number(innerHeight) / 1.5
+          : Number(innerHeight)
       }
-      scale={  Number(innerWidth) < 640 ? 0.4 : 0.5}
+      scale={Number(innerWidth) < 640 ? 0.4 : 0.5}
       entropy={4}
       maxParticles={5000}
       particleOptions={options}
