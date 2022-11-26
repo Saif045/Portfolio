@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import useWindowSize from "@rooks/use-window-size";
 import ParticleImage, {
   ParticleOptions,
