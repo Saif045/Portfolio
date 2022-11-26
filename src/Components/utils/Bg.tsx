@@ -66,7 +66,7 @@ const Bg = () => {
       }
       scale={Number(innerWidth) < 640 ? 0.4 : 0.5}
       entropy={4}
-      maxParticles={5000}
+      maxParticles={ Number(innerWidth) < 640 ? 3000 : 5000}
       particleOptions={options}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
