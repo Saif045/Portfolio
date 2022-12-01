@@ -9,13 +9,32 @@ const Hero = () => {
   let p2 = "Web Developer".split("");
   let p3 = "React js Enthusiast".split("");
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 1.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1  , transition: { duration: 2.5 }},
+   
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row justify-between h-screen ">
-      <div className=" mt-8 m-4 -mb-4 sm:self-center bg-black bg-opacity-60  text-3xl ">
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}>
+    <div className="flex flex-col sm:flex-row justify-start sm:justify-between h-[calc(100vh-6rem)] ">
+      <Bg />
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="  m-4 sm:self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
+        <motion.h1 variants={item}>
           {h1.map((letter, index) => {
             return (
               <TextSpan key={index}>
@@ -24,10 +43,7 @@ const Hero = () => {
             );
           })}
         </motion.h1>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 ,delay:1}}>
+        <motion.p variants={item}>
           {p1.map((letter, index) => {
             return (
               <TextSpan key={index}>
@@ -36,10 +52,7 @@ const Hero = () => {
             );
           })}
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.6 ,delay:2}}>
+        <motion.p variants={item}>
           {" "}
           {p2.map((letter, index) => {
             return (
@@ -49,10 +62,7 @@ const Hero = () => {
             );
           })}
         </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 ,delay:3}}>
+        <motion.p variants={item}>
           {p3.map((letter, index) => {
             return (
               <TextSpan key={index}>
@@ -61,8 +71,7 @@ const Hero = () => {
             );
           })}
         </motion.p>
-      </div>
-      <Bg />
+      </motion.div>
     </div>
   );
 };

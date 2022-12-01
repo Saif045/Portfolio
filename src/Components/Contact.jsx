@@ -27,13 +27,11 @@ const Contact = () => {
   };
 
   return (
-    <section
-      className="bg-white  text-gray-700 body-font relative"
-      id="contact">
+    <section className="text-[#270722]  body-font relative" id="contact">
       <form ref={form} onSubmit={sendEmail}>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#C2C6A7] ">
               Contact Me
             </h1>
           </div>
@@ -41,9 +39,7 @@ const Contact = () => {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label
-                    htmlFor="name"
-                    className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="name" className="leading-7 text-sm text-[#C2C6A7]">
                     Name
                   </label>
                   <input
@@ -51,15 +47,13 @@ const Contact = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-[#E5DDB3] rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label
-                    htmlFor="email"
-                    className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="email" className="leading-7 text-sm text-[#C2C6A7]">
                     Email
                   </label>
                   <input
@@ -67,40 +61,39 @@ const Contact = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                    className="w-full bg-[#E5DDB3] rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   />
                 </div>
               </div>
               <div className="p-2 w-full">
                 <div className="relative">
-                  <label
-                    htmlFor="message"
-                    className="leading-7 text-sm text-gray-600">
+                  <label htmlFor="message" className="leading-7 text-sm text-[#C2C6A7]">
                     Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    className="w-full bg-[#E5DDB3] rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button className="flex mx-auto text-white bg-yellow-400 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-500 rounded text-lg">
+                <button className="flex mx-auto text-[#270722] bg-[#ECCE8E] border-0 py-2 px-8 focus:outline-none hover:bg-[#C2C6A7] rounded text-lg">
                   Button
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                 <div className="pb-8">
-                  <a className=" text-indigo-500">contact@saif.com</a>
+                  <a className=" text-[#C2C6A7]">contact@saif.com</a>
                 </div>
 
                 <span className="inline-flex">
                   <a
-                    className="ml-4 text-gray-500"
+                    className="ml-4 "
                     href="https://github.com/Saif045"
                     target="_blank">
                     <svg
+                      className="fill-[#ECCE8E]"
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"
@@ -111,10 +104,11 @@ const Contact = () => {
                     </svg>
                   </a>
                   <a
-                    className="ml-4 text-gray-500"
+                    className="ml-4 "
                     href="https://www.linkedin.com/in/saif-osama"
                     target="_blank">
                     <svg
+                      className="fill-[#ECCE8E]"
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
                       y="0px"

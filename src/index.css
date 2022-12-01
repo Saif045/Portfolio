@@ -4,10 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
-  color: #f7f0f5;
+  position: relative;
+  color: #C2C6A7;
   font-family: "Montserrat", sans-serif;
-  background: #000;
+  background: #270722;
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -20,5 +23,5 @@ span {
 
 canvas {
   touch-action: auto !important ;
-
 }
+

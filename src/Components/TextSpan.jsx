@@ -16,7 +16,7 @@ const TextSpan = ({ children }) => {
         "scale(.9, 1.05)",
         "scale(1, 1)",
       ],
-      color: "#9B9ECE"
+      color: "#ECCE8E"
       
 
      

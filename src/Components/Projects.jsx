@@ -3,7 +3,7 @@ import { data } from "../assets/data";
 
 const Projects = () => {
   return (
-    <div className="">
+    <div className="mt-7">
       <p className="flex justify-center text-2xl mb-10">Projects</p>
       <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
         {data.map((site, i) => (
@@ -16,12 +16,12 @@ const Projects = () => {
 
                 <div className="absolute bottom-0 ">
                   <a href={site.live} target="_blank">
-                    <button className="px-4 py-2 bg-gray-900 hover:bg-slate-700 bg-opacity-90 border rounded-t-full">
+                    <button className="px-4 py-2 bg-transparent border border-[#DBCF96] hover:border-[#6A6F49] rounded-t-full">
                       Live
                     </button>
                   </a>
                   <a href={site.code} target="_blank">
-                    <button className="px-4 py-2 bg-gray-900 hover:bg-slate-700 bg-opacity-90 border rounded-t-full">
+                    <button className="px-4 py-2 bg-transparent border border-[#DBCF96] hover:border-[#6A6F49] rounded-t-full">
                       Code
                     </button>
                   </a>

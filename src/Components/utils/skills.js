@@ -4,12 +4,8 @@ export const skills = [
   "CSS",
   "TailwindCss",
   "Javascript",
+  "Framer Motion",
+  "Git",
   "Redux-Toolkit and Familiar with consuming API Data",
 ];
-export const list = [
-  "Next js",
-  "Typescript",
-  "SSR",
-  "Framer Motion",
-  "More Data Structures and Algorithms",
-];
+export const list = ["Next js", "Ts", "SSR"];

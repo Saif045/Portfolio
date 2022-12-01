@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <div className="sticky bg-[#250618] h-16 sm:h-20 z-[100] top-0">
+    <div className="sticky bg-[#270722] h-16 sm:h-20 z-[100] top-0">
       <div className=" sm:hidden absolute top-0 w-full flex justify-between ">
         <Link to="/">
           {" "}
@@ -87,7 +87,7 @@ const Header = () => {
             smooth={true}
             offset={-50}
             duration={500}
-            className="py-2 m-2  mr-4 px-4 font-semibold text-[#190410] bg-white sm:rounded-3xl ">
+            className="py-2 m-2  mr-4 px-4 font-semibold sm:rounded-b-full border-[#DBCF96] hover:border-[#6A6F49] border-2  ">
             CONTACT
           </ScrollLink>
         </div>
