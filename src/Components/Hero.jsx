@@ -26,14 +26,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="  flex flex-col sm:flex-row justify-between sm:justify-between h-[calc(100vh-6rem)] ">
+    <div className="  flex flex-col sm:flex-row  sm:justify-between h-[calc(100vh-6rem)] ">
       <Bg />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className=" m-4  sm:h-auto self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
+        className=" mt-10 sm:mt-auto m-4  sm:h-auto self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
         <motion.h1 variants={item}>
           {h1.map((letter, index) => {
             return (
