@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="  flex flex-col sm:flex-row justify-evenly sm:justify-between h-[calc(100vh-6rem)] ">
+    <div className="  flex flex-col sm:flex-row justify-between sm:justify-between h-[calc(100vh-6rem)] ">
       <Bg />
 
       <motion.div
