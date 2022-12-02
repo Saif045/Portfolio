@@ -33,7 +33,7 @@ const Hero = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="  m-4 self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
+        className="  m-4 h-full sm:h-auto self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
         <motion.h1 variants={item}>
           {h1.map((letter, index) => {
             return (
