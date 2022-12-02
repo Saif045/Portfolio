@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
+import AnimateLogo from "./AnimateLogo";
 
 const Header = () => {
   const [togglerNav, setTogglerNav] = useState(false);
@@ -11,12 +13,15 @@ const Header = () => {
     setTogglerNav(!togglerNav);
   };
 
+  const transition = { duration: 2, ease: "easeInOut" };
+
   return (
     <div className="sticky bg-[#270722] h-16 sm:h-20 z-[100] top-0">
-      <div className=" sm:hidden absolute top-0 w-full flex justify-between ">
+      <div className=" sm:hidden absolute top-0 w-full flex justify-between items-center">
         <Link to="/">
-          {" "}
-          <div className="logo m-4 text-3xl font-bold">Saif</div>{" "}
+          <div className="mt-2">
+            <AnimateLogo />
+          </div>
         </Link>
 
         <div
@@ -53,17 +58,18 @@ const Header = () => {
           className=" inline sm:hidden self-start nav-link"
           onClick={clickHandler}>
           {togglerNav ? (
-            <AiOutlineClose className="mr-4 mt-5 " size={30} />
+            <AiOutlineClose className="mr-3 mt-4 text-[#ECCE8E]" size={30} />
           ) : (
-            <FaBars className="mr-4 mt-5 " size={30} />
+            <FaBars className="mr-3  mt-4 text-[#ECCE8E]" size={30} />
           )}
         </button>
       </div>
 
-      <div className="hidden sm:flex absolute top-0 w-full  justify-between ">
+      <div className="hidden sm:flex absolute top-0 w-full  justify-between items-center">
         <Link to="/">
-          {" "}
-          <div className="logo m-5 text-4xl font-bold">Saif</div>
+          <div className="">
+            <AnimateLogo />
+          </div>
         </Link>
 
         <div className={" mt-8   "}>
