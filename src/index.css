@@ -7,10 +7,11 @@
 html,
 body {
   position: relative;
-  color: #C2C6A7;
+  color: #c2c6a7;
   font-family: "Montserrat", sans-serif;
   background: #270722;
   scroll-behavior: smooth;
+
 }
 
 .logo {
@@ -23,3 +24,8 @@ span {
 
 
 
+@media only screen and (max-width: 600px) {
+  canvas {
+    touch-action: auto !important ;
+  }
+}
