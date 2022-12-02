@@ -16,7 +16,7 @@ const Header = () => {
   const transition = { duration: 2, ease: "easeInOut" };
 
   return (
-    <div className="sticky bg-[#270722] h-16 sm:h-20 z-[100] top-0">
+    <div className="fixed w-full bg-[#270722] h-16 sm:h-20 z-[40] sm:z-[100] top-0">
       <div className=" sm:hidden absolute top-0 w-full flex justify-between items-center">
         <Link to="/">
           <div className="mt-2">
