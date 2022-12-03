@@ -4,11 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const About = () => {
   const item = {
-    hidden: { opacity: 0 },
+   
     show: {
       x: 0,
       opacity: 1,
-      transition: { type: "easeIn", duration: 1.2 },
+      transition: { type: "easeIn", duration: 0.8 },
     },
   };
 
@@ -16,7 +16,7 @@ const About = () => {
     <div className="h-[calc(100vh-6rem)] container mx-auto grid  my-20">
       <motion.div
         variants={item}
-        initial="hidden"
+        initial={{ x: -10 ,opacity: 0 }}
         whileInView="show"
         viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center ">
@@ -30,7 +30,7 @@ const About = () => {
 
       <motion.div
         variants={item}
-        initial="hidden"
+        initial={{ x: 10 ,opacity: 0 }}
         whileInView="show"
         viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center text-end justify-self-end ">
