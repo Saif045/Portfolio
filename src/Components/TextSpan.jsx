@@ -4,8 +4,7 @@ import { useState } from "react";
 const TextSpan = ({ children, color }) => {
   const controls = useAnimationControls();
   const [isplaying, setIsPlaying] = useState(false);
-
-  let colors = ["#ECCE8E", "#DEAC3F"];
+  const [colors, setcolors] = useState(["#ECCE8E", "#DEAC3F"]);
   let random_color = colors[Math.floor(Math.random() * colors.length)];
 
   const rubberBand = () => {
@@ -22,7 +21,6 @@ const TextSpan = ({ children, color }) => {
     });
     setIsPlaying(true);
   };
-  
 
   return (
     <motion.span
