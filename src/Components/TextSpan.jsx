@@ -4,15 +4,11 @@ import { useEffect, useState } from "react";
 const TextSpan = ({ children }) => {
   const controls = useAnimationControls();
   const [isplaying, setIsPlaying] = useState(false);
-  const [color, setColor] = useState("");
 
-  let colors = ["#ECCE8E", "#DEAC3F"];
-
-  let random_color = colors[Math.floor(Math.random() * colors.length)];
-
-  useEffect(() => {
-    setColor(random_color);
-  }, [random_color]);
+  const getRandomColor = () => {
+    let colors = ["#ECCE8E", "#DEAC3F"];
+    return colors[Math.floor(Math.random() * colors.length)];
+  };
 
   const rubberBand = () => {
     controls.start({
@@ -24,19 +20,18 @@ const TextSpan = ({ children }) => {
         "scale(.9, 1.05)",
         "scale(1, 1)",
       ],
-      color: color,
+      color: getRandomColor(),
     });
     setIsPlaying(true);
   };
-
   return (
     <motion.span
-      className={`text-[${color}]`}
       animate={controls}
       onMouseOver={() => {
         if (!isplaying) rubberBand();
       }}
-      onAnimationComplete={() => setIsPlaying(false)}>
+      onAnimationComplete={() => setIsPlaying(false)}
+      style={{ color: getRandomColor() }}>
       {children}
     </motion.span>
   );
