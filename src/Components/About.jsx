@@ -18,7 +18,7 @@ const About = () => {
     show: {
       x: 0,
       opacity: 1,
-      transition: { type: "easeIn",  duration: 1.2 },
+      transition: { type: "easeIn", duration: 1.2 },
     },
   };
 
@@ -27,10 +27,10 @@ const About = () => {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true }}
       className="h-[calc(100vh-6rem)] container mx-auto grid  my-20">
       <motion.div
         variants={item}
+        viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center ">
         <h1 className="text-xl mb-2">About Me</h1>
         <p>
@@ -42,6 +42,7 @@ const About = () => {
 
       <motion.div
         variants={item}
+        viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center text-end justify-self-end ">
         <div>
           <h1 className="text-xl mb-2 ">Skills</h1>
