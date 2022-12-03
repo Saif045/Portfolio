@@ -22,6 +22,7 @@ const TextSpan = ({ children, color }) => {
     });
     setIsPlaying(true);
   };
+  
 
   return (
     <motion.span
