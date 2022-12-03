@@ -21,8 +21,7 @@ const Hero = () => {
 
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1  , transition: { duration: 2.5 }},
-   
+    show: { opacity: 1, transition: { duration: 2.5 } },
   };
 
   return (

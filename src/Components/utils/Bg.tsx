@@ -22,6 +22,7 @@ const particleOptions: ParticleOptions = {
     const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
     return magnitude < 200;
   },
+
   color: ({ x, y, image }) => {
     const pixel = image.get(x, y);
     // Canvases are much more performant when painting as few colors as possible.
@@ -35,6 +36,7 @@ const particleOptions: ParticleOptions = {
       ${round(pixel.a, STEP) / 255}
     )`;
   },
+
   radius: ({ x, y, image }) => {
     const pixel = image.get(x, y);
     const magnitude = (pixel.r + pixel.g + pixel.b) / 3;
@@ -114,5 +116,10 @@ filter: ({ x, y, image }) => {
   },
 };
 
+
+
+
+
+  
 */
 }

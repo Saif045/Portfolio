@@ -31,7 +31,7 @@ const Contact = () => {
       <form ref={form} onSubmit={sendEmail}>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#C2C6A7] ">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#ECCE8E] ">
               Contact Me
             </h1>
           </div>
@@ -39,7 +39,7 @@ const Contact = () => {
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label htmlFor="name" className="leading-7 text-sm text-[#C2C6A7]">
+                  <label htmlFor="name" className="leading-7 text-sm text-[#ECCE8E]">
                     Name
                   </label>
                   <input
@@ -53,7 +53,7 @@ const Contact = () => {
               </div>
               <div className="p-2 w-1/2">
                 <div className="relative">
-                  <label htmlFor="email" className="leading-7 text-sm text-[#C2C6A7]">
+                  <label htmlFor="email" className="leading-7 text-sm text-[#ECCE8E]">
                     Email
                   </label>
                   <input
@@ -67,7 +67,7 @@ const Contact = () => {
               </div>
               <div className="p-2 w-full">
                 <div className="relative">
-                  <label htmlFor="message" className="leading-7 text-sm text-[#C2C6A7]">
+                  <label htmlFor="message" className="leading-7 text-sm text-[#ECCE8E]">
                     Message
                   </label>
                   <textarea
