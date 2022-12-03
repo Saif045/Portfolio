@@ -3,16 +3,6 @@ import { skills, list } from "./utils/skills";
 import { motion, AnimatePresence } from "framer-motion";
 
 const About = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 1,
-      },
-    },
-  };
-
   const item = {
     hidden: { opacity: 0 },
     show: {
@@ -23,13 +13,11 @@ const About = () => {
   };
 
   return (
-    <motion.div
-      variants={container}
-      initial="hidden"
-      whileInView="show"
-      className="h-[calc(100vh-6rem)] container mx-auto grid  my-20">
+    <div className="h-[calc(100vh-6rem)] container mx-auto grid  my-20">
       <motion.div
         variants={item}
+        initial="hidden"
+        whileInView="show"
         viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center ">
         <h1 className="text-xl mb-2">About Me</h1>
@@ -42,6 +30,8 @@ const About = () => {
 
       <motion.div
         variants={item}
+        initial="hidden"
+        whileInView="show"
         viewport={{ once: true, amount: 1 }}
         className="sm:w-1/2 lg:w-1/3 m-4 self-center text-end justify-self-end ">
         <div>
@@ -53,7 +43,7 @@ const About = () => {
           <p>{list.join(" , ")}</p>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
