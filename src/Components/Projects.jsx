@@ -16,12 +16,12 @@ const Projects = () => {
 
                 <div className="absolute bottom-0 ">
                   <a href={site.live} target="_blank">
-                    <button className="px-4 py-2 bg-transparent border border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
+                    <button className="px-4 py-2 bg-transparent border-t border-x border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
                       Live
                     </button>
                   </a>
                   <a href={site.code} target="_blank">
-                    <button className="px-4 py-2 bg-transparent border border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
+                    <button className="px-4 py-2 bg-transparent border-t border-x border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
                       Code
                     </button>
                   </a>
