@@ -7,7 +7,7 @@
 html,
 body {
   position: relative;
-  color: #ECCE8E;
+  color: #ecce8e;
   font-family: "Montserrat", sans-serif;
   background: #270722;
   scroll-behavior: smooth;
@@ -23,5 +23,3 @@ span {
 canvas {
   touch-action: auto !important ;
 }
-
-

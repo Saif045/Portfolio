@@ -79,7 +79,7 @@ const Bg = () => {
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
       backgroundColor="ffffff00"
-      className="  m-0 p-0 z-50 block w-full sm:w-[50vw] h-[50vh] sm:h-full"
+      className="  m-0 p-0 z-40 block w-full sm:w-[50vw] h-[50vh] sm:h-full"
     />
   );
 };

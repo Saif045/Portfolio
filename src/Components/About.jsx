@@ -25,6 +25,7 @@ const About = () => {
           A passionate individual who always thrive to work on end to end
           products which develop sustainable and scalable social and technical
           systems to create impact.
+          Interested in Remote Work
         </p>
       </motion.div>
 

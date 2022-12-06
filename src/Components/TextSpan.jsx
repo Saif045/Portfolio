@@ -6,7 +6,7 @@ const TextSpan = ({ children }) => {
   const [isplaying, setIsPlaying] = useState(false);
 
   const getRandomColor = () => {
-    let colors = ["#ECCE8E", "#DEAC3F"];
+    let colors = ["#F0D9A8", "#ECCE8E", "#EACA85"];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
