@@ -51,7 +51,7 @@ const Header = () => {
       animate={{
         backgroundColor: color ? "#270722" : "transparent",
       }}
-      className="fixed w-full h-16 sm:h-[72px] z-[100] bg-[#270722]">
+      className="fixed w-full h-16 z-[100] bg-[#270722]">
       <div className=" sm:hidden w-full flex justify-between items-center">
         <Link to="/">
           <div className="mt-2">
@@ -130,14 +130,14 @@ const Header = () => {
         </button>
       </div>
 
-      <div className="hidden sm:flex absolute top-0 w-full  justify-between items-baseline">
+      <div className="hidden sm:flex absolute top-0 w-full  justify-between ">
         <Link to="/">
           <div className="">
             <AnimateLogo />
           </div>
         </Link>
 
-        <div className="">
+        <div className="mt-4">
           <a
             href="https://github.com/Saif045"
             target="_blank"

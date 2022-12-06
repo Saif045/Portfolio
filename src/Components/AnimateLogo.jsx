@@ -19,7 +19,7 @@ const AnimateLogo = () => {
 
   return (
     <motion.div
-      className="text-4xl  ml-6 mt-4 logo text-[#ECCE8E]"
+      className="text-4xl  ml-6 mt-2 logo text-[#ECCE8E]"
       variants={container}
       initial="hidden"
       animate="show">
