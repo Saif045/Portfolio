@@ -27,9 +27,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="text-[#270722]  body-font relative" id="contact">
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="container px-5 py-24 mx-auto">
+    <section className="text-[#270722]  body-font relative sm:w-[calc(100vw-5rem)] sm:absolute sm:right-0 " id="contact">
+      <form ref={form} onSubmit={sendEmail} >
+        <div className="container px-5 pt-14  mx-auto">
           <div className="flex flex-col text-center w-full mb-12">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-[#ECCE8E] ">
               Contact Me

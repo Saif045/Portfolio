@@ -13,16 +13,12 @@ const AnimateLogo = () => {
   };
 
   const item = {
-    hidden: { opacity: 0  , },
-    show: { opacity: 1,  },
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
   };
 
   return (
-    <motion.div
-      className="text-4xl  ml-6 mt-2 logo text-[#ECCE8E]"
-      variants={container}
-      initial="hidden"
-      animate="show">
+    <motion.div variants={container} initial="hidden" animate="show">
       {["S", "a", "i", "f"].map((a, b) => (
         <motion.span variants={item} key={b}> {a} </motion.span>
       ))}

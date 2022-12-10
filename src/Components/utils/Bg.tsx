@@ -65,13 +65,13 @@ const Bg = () => {
     <ParticleImage
       src={s}
       width={
-        Number(innerWidth) < 640 ? Number(innerWidth) : Number(innerWidth) / 2
+        Number(innerWidth) < 768 ? Number(innerWidth) : Number(innerWidth) / 2
       }
       height={
-        Number(innerWidth) < 640 ? Number(innerHeight) / 2 : Number(innerHeight)
+        Number(innerWidth) < 768 ? Number(innerHeight) / 2 : Number(innerHeight)
       }
       scale={
-        Number(innerWidth) < 320 ? 0.4 : Number(innerWidth) > 800 ? 0.8 : 0.5
+        Number(innerWidth) < 320 ? 0.4 :Number(innerWidth) > 700 ? 0.7 : Number(innerWidth) > 900 ? 0.8  : 0.5
       }
       entropy={5}
       maxParticles={Number(innerWidth) < 640 ? 1000 : 6000}
@@ -79,7 +79,7 @@ const Bg = () => {
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}
       backgroundColor="ffffff00"
-      className="  m-0 p-0 z-40 block w-full sm:w-[50vw] h-[50vh] sm:h-full"
+      className="  m-0 p-0 z-40 block w-full md:w-[50vw] h-[50vh] md:h-full"
     />
   );
 };

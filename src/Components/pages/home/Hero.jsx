@@ -1,6 +1,6 @@
 import React from "react";
-import TextSpan from "./TextSpan";
-import Bg from "./utils/Bg";
+import TextSpan from "../../utils/TextSpan";
+import Bg from "../../utils/Bg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -25,14 +25,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="  flex flex-col sm:flex-row  sm:justify-between h-screen ">
+    <div className="  flex flex-col md:flex-row sm:justify-center  md:justify-between h-screen  sm:w-[calc(100vw-5.8rem)] lg:w-[calc(100vw-7rem)] sm:absolute sm:right-0 ">
       <Bg />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className=" sm:-mb-8 m-4  sm:h-auto self-center sm:order-first text-center sm:text-left text-2xl sm:text-3xl lg:text-4xl ">
+        className=" md:-mb-8 m-4 md:m-0  md:h-auto self-center md:order-first text-center md:text-left text-2xl sm:text-3xl lg:text-4xl ">
         <motion.h1 variants={item}>
           {h1.map((letter, index) => {
             return (

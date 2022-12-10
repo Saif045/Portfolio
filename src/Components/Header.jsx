@@ -1,16 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineClose } from "react-icons/ai";
-import { FaBars } from "react-icons/fa";
-import { Link as ScrollLink } from "react-scroll";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import AnimateLogo from "./AnimateLogo";
+import AnimateLogo from "./utils/AnimateLogo";
 import useWindowSize from "@rooks/use-window-size";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHome,
+  faUser,
+  faEnvelope,
+  faSuitcase,
+  faBars,
+  faClose,
+  faGear,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [open, cycleOpen] = useCycle(false, true);
   const [color, setColor] = useState(false);
   const { innerWidth, innerHeight } = useWindowSize();
+
+  let navsocials = [
+    { to: "https://github.com/Saif045", name: "Github", icon: faGithub },
+    {
+      to: "https://www.linkedin.com/in/saif-osama",
+      name: "Linkedin",
+      icon: faLinkedin,
+    },
+  ];
+
+  let navData = [
+    { to: "/", name: "Home", icon: faHome },
+    { to: "/contact", name: "Contact", icon: faEnvelope },
+    { to: "/about", name: "About", icon: faUser },
+    {
+      to: "/projects",
+      name: "Projects",
+      icon: faSuitcase,
+    },
+    { to: "/skills", name: "Skills", icon: faGear },
+  ];
 
   const listenScrollEvent = (event) => {
     if (window.scrollY > 100) {
@@ -52,9 +81,10 @@ const Header = () => {
         backgroundColor: color ? "#270722" : "transparent",
       }}
       className="fixed w-full h-14 z-[100] bg-[#270722]">
+      {/* mobile  */}
       <div className=" sm:hidden w-full flex justify-between items-center">
         <Link to="/">
-          <div className="mt-2">
+          <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />
           </div>
         </Link>
@@ -78,43 +108,45 @@ const Header = () => {
                   transition: { delay: 0.7, duration: 0.3 },
                 }}>
                 <motion.div
-                  className="flex flex-col text-center text-[#190410] font-bold text-xl w-full mt-20"
+                  className="flex flex-col text-center justify-between text-[#190410] font-bold text-xl w-full mt-20"
                   initial="closed"
                   animate="open"
                   exit="closed"
                   variants={sideVariants}>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
-                    href="https://github.com/Saif045"
-                    target="_blank"
-                    className="  block"
-                    onClick={cycleOpen}>
-                    Github
-                  </motion.a>
-                  <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}
-                    href="https://www.linkedin.com/in/saif-osama"
-                    target="_blank"
-                    className=" my-6  block"
-                    onClick={cycleOpen}>
-                    Linkedin
-                  </motion.a>
-                  <motion.div
-                    className="block"
-                    whileHover={{ scale: 1.1 }}
-                    variants={itemVariants}>
-                    <ScrollLink
-                      to="contact"
-                      spy={true}
-                      smooth={true}
-                      offset={-50}
-                      duration={500}
-                      onClick={cycleOpen}>
-                      CONTACT
-                    </ScrollLink>
-                  </motion.div>
+                  {navData.map((element, i) => (
+                    <motion.div
+                      className="my-2"
+                      whileHover={{ scale: 1.1 }}
+                      variants={itemVariants}
+                      onClick={cycleOpen}
+                      key={i}>
+                      <Link to={element.to}>
+                        <FontAwesomeIcon
+                          icon={element.icon}
+                          color="#4d4d4e"
+                          className="mr-3"
+                        />
+                        {element.name}
+                      </Link>
+                    </motion.div>
+                  ))}
+                  {navsocials.map((element, i) => (
+                    <motion.div
+                      className="my-2"
+                      whileHover={{ scale: 1.1 }}
+                      variants={itemVariants}
+                      onClick={cycleOpen}
+                      key={i}>
+                      <a href={element.to} target="_blank">
+                        <FontAwesomeIcon
+                          icon={element.icon}
+                          color="#4d4d4e"
+                          className="mr-3"
+                        />
+                        {element.name}
+                      </a>
+                    </motion.div>
+                  ))}
                 </motion.div>
               </motion.aside>
             )}
@@ -123,44 +155,59 @@ const Header = () => {
 
         <button className="z-[100] sm:hidden self-start " onClick={cycleOpen}>
           {open ? (
-            <AiOutlineClose className="mr-3 mt-5 text-[#49350b]" size={30} />
+            <FontAwesomeIcon
+              icon={faClose}
+              className="mr-3 mt-5 text-[#49350b]"
+              size="2x"
+            />
           ) : (
-            <FaBars className="mr-3 mt-5 text-[#ECCE8E]" size={30} />
+            <FontAwesomeIcon
+              icon={faBars}
+              className="mr-3 mt-5 text-[#ECCE8E]"
+              size="2x"
+            />
           )}
         </button>
       </div>
 
-      <div className="hidden sm:flex absolute top-0 w-full  justify-between ">
+      {/* Desktop  */}
+
+      <div className="hidden sm:flex flex-col absolute top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
         <Link to="/">
-          <div className="">
+          <div className=" mb-10 text-4xl  mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />
           </div>
         </Link>
 
-        <div className="mt-4">
-          <a
-            href="https://github.com/Saif045"
-            target="_blank"
-            className="p-2 m-2  ">
-            Github
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/saif-osama"
-            target="_blank"
-            className="p-2 m-2  ">
-            Linkedin
-          </a>
-
-          <ScrollLink
-            to="contact"
-            spy={true}
-            smooth={true}
-            offset={-50}
-            duration={500}
-            className="pb-4 pt-8 m-2  mr-4 px-3 font-semibold sm:rounded-b-full border-[#ECCE8E] hover:border-[#ecce8eb7] border-b border-x ">
-            CONTACT
-          </ScrollLink>
+        {navData.map((element, i) => (
+          <Link to={element.to} key={i}>
+            <div className=" mb-4">
+              <motion.div whileHover={{ scale: 1.2 }}>
+                <FontAwesomeIcon
+                  icon={element.icon}
+                  color="#ecce8e"
+                  size="xl"
+                />
+              </motion.div>
+              <motion.p className="text-sm">{element.name}</motion.p>
+            </div>
+          </Link>
+        ))}
+        <div className="absolute bottom-2 flex self-center gap-3">
+          {navsocials.map((element, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.3 }}
+              variants={itemVariants}>
+              <a href={element.to} target="_blank">
+                <FontAwesomeIcon
+                  icon={element.icon}
+                  color="#ecce8e"
+                  size="xl"
+                />
+              </a>
+            </motion.div>
+          ))}
         </div>
       </div>
     </motion.div>

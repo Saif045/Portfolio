@@ -1,13 +1,13 @@
 import React from "react";
-import { data } from "../assets/data";
+import { data } from "../../../assets/data";
 
 const Projects = () => {
   return (
-    <div className="mt-7">
+    <div className="pt-20 px-4 sm:w-[calc(100vw-5rem)] sm:absolute sm:right-0">
       <p className="flex justify-center text-2xl mb-10">Projects</p>
       <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
         {data.map((site, i) => (
-          <div className="border relative pb-12" key={i}>
+          <div className="border border-[#ECCE8E] relative pb-12" key={i}>
             <div>
               <img className="w-full h-full" src={site.img} alt={site.name} />
               <div className="   p-2">
