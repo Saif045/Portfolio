@@ -3,9 +3,9 @@ import { data } from "../../../assets/data";
 
 const Projects = () => {
   return (
-    <div className="pt-20 px-4 sm:w-[calc(100vw-5rem)] sm:absolute sm:right-0">
+    <div className="pt-20 px-4 sm:w-[calc(100%-5rem)] absolute right-0">
       <p className="flex justify-center text-2xl mb-10">Projects</p>
-      <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center m-4 container mx-auto">
+      <div className="grid grid-cols-auto-fill sm:grid-cols-auto-fill-sm gap-2  justify-items-center  container mx-auto">
         {data.map((site, i) => (
           <div className="border border-[#ECCE8E] relative pb-12" key={i}>
             <div>

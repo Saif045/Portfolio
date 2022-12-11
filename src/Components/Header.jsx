@@ -172,7 +172,7 @@ const Header = () => {
 
       {/* Desktop  */}
 
-      <div className="hidden sm:flex flex-col absolute top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
+      <div className="hidden sm:flex flex-col fixed top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
         <Link to="/">
           <div className=" mb-10 text-4xl  mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />
