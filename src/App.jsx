@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./Components/Header";
 import About from "./Components/pages/about/About";
 import Contact from "./Components/pages/contact/Contact";
@@ -8,13 +9,13 @@ import Skills from "./Components/pages/skills/Skills";
 import ScrollToTop from "./Components/utils/ScrollToTop";
 
 function App() {
+  const location = useLocation();
   return (
     <>
-      <Router>
-        <ScrollToTop />
-        <Header />
-
-        <Routes>
+      <ScrollToTop />
+      <Header />
+      <AnimatePresence exitBeforeEnter>
+        <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}></Route>
 
           <Route path="/about" element={<About />}></Route>
@@ -25,7 +26,7 @@ function App() {
 
           <Route path="/skills" element={<Skills />}></Route>
         </Routes>
-      </Router>
+      </AnimatePresence>
     </>
   );
 }

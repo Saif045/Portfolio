@@ -64,7 +64,7 @@ const Header = () => {
   const sideVariants = {
     closed: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.06,
         staggerDirection: -1,
       },
     },
@@ -76,11 +76,7 @@ const Header = () => {
     },
   };
   return (
-    <motion.div
-      animate={{
-        backgroundColor: color ? "#270722" : "transparent",
-      }}
-      className="fixed w-full h-14 z-[100] bg-[#270722]">
+    <div className="fixed w-full h-14 z-[100] bg-[#270722]">
       {/* mobile  */}
       <div className=" sm:hidden w-full flex justify-between items-center">
         <Link to="/">
@@ -105,7 +101,7 @@ const Header = () => {
                 }}
                 exit={{
                   width: 0,
-                  transition: { delay: 0.7, duration: 0.3 },
+                  transition: { delay: 0.3, duration: 0.5 },
                 }}>
                 <motion.div
                   className="flex flex-col text-center justify-between text-[#190410] font-bold text-xl w-full mt-20"
@@ -152,7 +148,6 @@ const Header = () => {
             )}
           </AnimatePresence>
         </main>
-
         <button className="z-[100] sm:hidden self-start " onClick={cycleOpen}>
           {open ? (
             <FontAwesomeIcon
@@ -182,7 +177,7 @@ const Header = () => {
         {navData.map((element, i) => (
           <Link to={element.to} key={i}>
             <div className=" mb-4">
-              <motion.div whileHover={{ scale: 1.2 }}>
+              <motion.div whileHover={{ scale: 1.3 }}>
                 <FontAwesomeIcon
                   icon={element.icon}
                   color="#ecce8e"
@@ -210,7 +205,7 @@ const Header = () => {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

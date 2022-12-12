@@ -1,14 +1,9 @@
 import { motion, useAnimationControls } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const TextSpan = ({ children }) => {
+const TextSpan = ({ char }) => {
   const controls = useAnimationControls();
   const [isplaying, setIsPlaying] = useState(false);
-
-  const getRandomColor = () => {
-    let colors = ["#F0D9A8", "#ECCE8E", "#EACA85"];
-    return colors[Math.floor(Math.random() * colors.length)];
-  };
 
   const rubberBand = () => {
     controls.start({
@@ -20,19 +15,19 @@ const TextSpan = ({ children }) => {
         "scale(.9, 1.05)",
         "scale(1, 1)",
       ],
-      color: getRandomColor(),
+      color: "#DCA42E",
     });
     setIsPlaying(true);
   };
+
   return (
     <motion.span
       animate={controls}
       onMouseOver={() => {
         if (!isplaying) rubberBand();
       }}
-      onAnimationComplete={() => setIsPlaying(false)}
-      style={{ color: getRandomColor() }}>
-      {children}
+      onAnimationComplete={() => setIsPlaying(false)}>
+      {char === " " ? "\u00A0" : char}
     </motion.span>
   );
 };

@@ -14,14 +14,15 @@ const Hero = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 1.5,
+        staggerChildren: 0.13,
       },
     },
   };
-
   const item = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 2.5 } },
+    show: {
+      opacity: 1,
+    },
   };
 
   return (
@@ -33,52 +34,23 @@ const Hero = () => {
         initial="hidden"
         animate="show"
         className=" md:-mb-8 m-4 md:m-0  md:h-auto self-center md:order-first text-center md:text-left text-2xl sm:text-3xl lg:text-4xl ">
-        <motion.h1 variants={item}>
-          {h1.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === " " ? "\u00A0" : letter}
-              </TextSpan>
-            );
-          })}
-        </motion.h1>
-        <motion.p variants={item}>
-          {p1.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === " " ? "\u00A0" : letter}
-              </TextSpan>
-            );
-          })}
-        </motion.p>
-        <motion.p variants={item}>
-          {" "}
-          {p2.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === " " ? "\u00A0" : letter}
-              </TextSpan>
-            );
-          })}
-        </motion.p>
-        <motion.p variants={item}>
-          {p3.map((letter, index) => {
-            return (
-              <TextSpan key={index}>
-                {letter === " " ? "\u00A0" : letter}
-              </TextSpan>
-            );
-          })}
-        </motion.p>
+        {[h1, p1, p2, p3].map((a, i) => (
+          <div key={i}>
+            {a === " "
+              ? "\u00A0"
+              : a.map((char, b) => (
+                  <motion.span variants={item} key={b}>
+                    <TextSpan char={char} />
+                  </motion.span>
+                ))}
+          </div>
+        ))}
       </motion.div>
     </div>
   );
 };
 
 export default Hero;
-
 {
-  /*
- {letter === " " ? "\u00A0" :  letter }
-*/
+  /* {letter === " " ? "\u00A0" :  letter }*/
 }
