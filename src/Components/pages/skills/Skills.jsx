@@ -12,7 +12,7 @@ const item = {
 
 const Skills = () => {
   return (
-    <div className=" sm:w-[calc(100vw-5rem)] sm:absolute sm:right-0 pt-14  ">
+    <div className="  xs:w-[calc(100vw-5rem)] xs:absolute xs:right-0  pt-14  ">
       <div className="container mx-auto px-2 grid h-[80vh]  ">
         <motion.div
           variants={item}

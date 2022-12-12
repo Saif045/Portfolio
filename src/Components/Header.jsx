@@ -78,7 +78,7 @@ const Header = () => {
   return (
     <div className="fixed w-full h-14 z-[100] bg-[#270722]">
       {/* mobile  */}
-      <div className=" sm:hidden w-full flex justify-between items-center">
+      <div className="  xs:hidden w-full flex justify-between items-center">
         <Link to="/">
           <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />
@@ -167,7 +167,7 @@ const Header = () => {
 
       {/* Desktop  */}
 
-      <div className="hidden sm:flex flex-col fixed top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
+      <div className="hidden xs:flex flex-col fixed top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
         <Link to="/">
           <div className=" mb-10 text-4xl  mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />

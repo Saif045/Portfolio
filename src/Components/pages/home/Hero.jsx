@@ -26,14 +26,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="  flex flex-col md:flex-row sm:justify-center  md:justify-between h-screen  sm:w-[calc(100vw-5.8rem)] lg:w-[calc(100vw-7rem)] sm:absolute sm:right-0 ">
+    <div className="  flex flex-col md:flex-row sm:justify-center  md:justify-between h-screen   xs:w-[calc(100vw-5rem)] xs:absolute xs:right-0">
       <Bg />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className=" md:-mb-8 m-4 md:m-0  md:h-auto self-center md:order-first text-center md:text-left text-2xl sm:text-3xl lg:text-4xl ">
+        className="pl-3 lg:pl-10 xl:pl-16 md:-mb-8 m-4 md:m-0  md:h-auto self-center md:order-first text-center md:text-left text-2xl sm:text-3xl lg:text-4xl ">
         {[h1, p1, p2, p3].map((a, i) => (
           <div key={i}>
             {a === " "
