@@ -12,7 +12,7 @@ const item = {
 
 const Skills = () => {
   return (
-    <div className="  xs:w-[calc(100vw-5rem)] xs:absolute xs:right-0  pt-14  ">
+    <div className="  xs:w-[calc(100%-5rem)] xs:absolute xs:right-0  pt-14  ">
       <div className="container mx-auto px-2 grid h-[80vh]  ">
         <motion.div
           variants={item}
@@ -36,8 +36,8 @@ const Skills = () => {
           <div>
             <p>
               I'm quiet confident, naturally curious, and perpetually working on
-              improving my chops one design problem at a time. I guarantee a commitment during
-              work on your project.
+              improving my chops one design problem at a time. I guarantee a
+              commitment during work on your project.
             </p>
           </div>
         </motion.div>

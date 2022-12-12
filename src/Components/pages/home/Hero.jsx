@@ -26,7 +26,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="  flex flex-col md:flex-row sm:justify-center  md:justify-between h-screen   xs:w-[calc(100vw-5rem)] xs:absolute xs:right-0">
+    <div className="  flex flex-col md:flex-row sm:justify-center  md:justify-between h-screen   xs:w-[calc(100%-5rem)] xs:absolute xs:right-0">
       <Bg />
 
       <motion.div

@@ -60,7 +60,7 @@ const Contact = () => {
       initial="hidden"
       animate="show"
       exit={{ opacity: 0 }}
-      className="text-[#270722]  body-font relative xs:w-[calc(100vw-5rem)] xs:absolute xs:right-0 "
+      className="text-[#270722]  body-font relative xs:w-[calc(100%-5rem)] xs:absolute xs:right-0 "
       id="contact">
       <form ref={form} onSubmit={sendEmail}>
         <div className="container px-5 pt-20 sm:pt-14  mx-auto">
