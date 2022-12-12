@@ -34,12 +34,11 @@ const Skills = () => {
           animate="show"
           className="sm:w-1/2 lg:w-1/3 m-4 self-center text-end justify-self-end ">
           <div>
-            <h1 className="text-xl mb-2 ">Skills</h1>
-            <p>{skills.join(" , ")}</p>
-          </div>
-          <div>
-            <h1 className="text-lg mt-2 my-1 ">Currently learning</h1>
-            <p>{list.join(" , ")}</p>
+            <p>
+              I'm quiet confident, naturally curious, and perpetually working on
+              improving my chops one design problem at a time. I guarantee a commitment during
+              work on your project.
+            </p>
           </div>
         </motion.div>
       </div>
