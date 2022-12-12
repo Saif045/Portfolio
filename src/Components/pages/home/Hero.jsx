@@ -14,7 +14,7 @@ const Hero = () => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.13,
+        staggerChildren: 0.1,
       },
     },
   };
