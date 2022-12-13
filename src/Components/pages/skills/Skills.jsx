@@ -1,5 +1,5 @@
 import React from "react";
-import { skills, list } from "../../utils/skills";
+import { skills, list, secondSkills } from "../../utils/skills";
 import { motion } from "framer-motion";
 
 const item = {
@@ -34,11 +34,7 @@ const Skills = () => {
           animate="show"
           className="sm:w-1/2 lg:w-1/3 m-4 self-center text-end justify-self-end ">
           <div>
-            <p>
-              I'm quiet confident, naturally curious, and perpetually working on
-              improving my chops one design problem at a time. I guarantee a
-              commitment during work on your project.
-            </p>
+            <p>{secondSkills}</p>
           </div>
         </motion.div>
       </div>

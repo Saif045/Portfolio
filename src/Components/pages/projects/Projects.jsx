@@ -2,7 +2,6 @@ import React from "react";
 import { data } from "../../../assets/data";
 import { motion } from "framer-motion";
 
-
 const Projects = () => {
   const container = {
     hidden: { opacity: 0 },
@@ -30,18 +29,6 @@ const Projects = () => {
     },
   };
 
-  const borderAnimation = {
-    hidden: { opacity: 0 },
-    show: {
-      
-      opacity: 1,
-      transition: {
-        type: "easeIn",
-      },
-    
-    },
-  };
-
   return (
     <motion.div
       variants={container}
@@ -64,7 +51,7 @@ const Projects = () => {
 
                 <div className="absolute bottom-0 ">
                   <a href={site.live} target="_blank">
-                    <button  className="px-4 py-2 bg-transparent border-t border-x border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
+                    <button className="px-4 py-2 bg-transparent border-t border-x border-[#ECCE8E] hover:border-[#ecce8eb7] rounded-t-full">
                       Live
                     </button>
                   </a>
@@ -85,7 +72,8 @@ const Projects = () => {
 
 export default Projects;
 
-{/* 
+{
+  /* 
 {
   border-top-width: 1px;
   border-left-width: 1px;
@@ -94,4 +82,5 @@ export default Projects;
   border-top-left-radius: 9999px;
   border-top-right-radius: 9999px;
 }
-*/}
+*/
+}

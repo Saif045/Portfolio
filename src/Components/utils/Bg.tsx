@@ -71,7 +71,13 @@ const Bg = () => {
         Number(innerWidth) < 768 ? Number(innerHeight) / 2 : Number(innerHeight)
       }
       scale={
-        Number(innerWidth) < 320 ? 0.4 :Number(innerWidth) > 700 ? 0.7 : Number(innerWidth) > 900 ? 0.8  : 0.5
+        Number(innerWidth) < 320
+          ? 0.4
+          : Number(innerWidth) > 700
+          ? 0.7
+          : Number(innerWidth) > 900
+          ? 0.8
+          : 0.5
       }
       entropy={5}
       maxParticles={Number(innerWidth) < 640 ? 1000 : 6000}
@@ -85,41 +91,3 @@ const Bg = () => {
 };
 
 export default Bg;
-
-{
-  /* 
-
-filter: ({ x, y, image }) => {
-    // Get pixel
-    const pixel = image.get(x, y);
-    // Make a particle for this pixel if blue > 50 (range 0-255)
-    return pixel.b > 50;
-  },
-  color: ({ x, y, image }) => {
-    const pixel = image.get(x, y);
-    // Canvases are much more performant when painting as few colors as possible.
-    // Use color of pixel as color for particle however round to nearest 30
-    // to decrease the number of unique colors painted on the canvas.
-    // You'll notice if we remove this rounding, the framerate will slow down a lot.
-    return `rgba(
-      ${round(pixel.r, STEP)}, 
-      ${round(pixel.g, STEP)}, 
-      ${round(pixel.b, STEP)}, 
-      ${round(pixel.a, STEP) / 255}
-    )`;
-  },
-  radius: () => Math.random() * 1.5 + 0.5,
-  mass: () => 40,
-  friction: () => 0.15,
-  initialPosition: ({ canvasDimensions }) => {
-    return new Vector(canvasDimensions.width / 2, canvasDimensions.height / 2);
-  },
-};
-
-
-
-
-
-  
-*/
-}

@@ -132,7 +132,7 @@ const Contact = () => {
                   variants={item}
                   className="p-2 w-[80%] self-center mt-4 border-t border-[#ECCE8E]"></motion.div>
                 <motion.div variants={item} className="py-4">
-                  <a className=" text-[#ECCE8E]">contact@saif.com</a>
+                  <a className=" text-[#ECCE8E]">saif.x45@gmail.com</a>
                 </motion.div>
 
                 <span className="inline-flex self-center">
