@@ -3,6 +3,7 @@ import foods from "./foods.webp";
 import rreact from "./React.webp";
 import room from "./room.webp";
 import SunnySide from "./SunnySide.webp";
+import Spotify from "./Spotify.webp";
 
 export const data = [
   {
@@ -14,17 +15,22 @@ export const data = [
     live: "https://netflix-clone45.netlify.app/",
   },
   {
+    name: "Spotify Clone",
+    description: "a clone of Spotify using react and The Shazam API.",
+    img: Spotify,
+    code: "https://github.com/Saif045/Spotify",
+    live: "https://spotify45.netlify.app/",
+  },
+  {
     name: "React.",
-    description:
-      "a website offering data analytics as a service for business.",
+    description: "a website offering data analytics as a service for business.",
     img: rreact,
     code: "https://github.com/Saif045/React45",
     live: "https://react45.netlify.app/",
   },
   {
     name: "SunnySide",
-    description:
-      "project for a creative agency helping brands grow fast.",
+    description: "project for a creative agency helping brands grow fast.",
     img: SunnySide,
     code: "https://github.com/Saif045/sunny-side",
     live: "https://sunny-side45.netlify.app/",
