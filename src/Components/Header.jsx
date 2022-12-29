@@ -13,6 +13,7 @@ import {
   faBars,
   faClose,
   faGear,
+  faFileInvoice,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
@@ -28,6 +29,7 @@ const Header = () => {
       icon: faLinkedin,
     },
   ];
+  <FontAwesomeIcon icon="fa-sharp fa-solid fa-file-invoice" />;
 
   let navData = [
     { to: "/", name: "Home", icon: faHome },
@@ -78,7 +80,7 @@ const Header = () => {
   return (
     <div className="">
       {/* mobile  */}
-      <div className=" fixed h-14 z-[100] bg-[#270722] xs:hidden w-full flex justify-between items-center">
+      <div className=" absolute h-14 z-[80] xs:hidden w-full flex justify-between items-center">
         <Link to="/">
           <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />
@@ -126,6 +128,25 @@ const Header = () => {
                       </Link>
                     </motion.div>
                   ))}
+                  <motion.div
+                    className="my-2"
+                    variants={itemVariants}
+                    onClick={cycleOpen}
+                    whileHover={{ scale: 1.1 }}>
+                    <a
+                      href="https://drive.google.com/file/d/1bQQQ_rqIWk6bUuuek7hCXSBuCpzEm97a/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <FontAwesomeIcon
+                        icon={faFileInvoice}
+                        color="#4d4d4e"
+                        className="mr-3"
+                      />
+
+                   Resume
+                    </a>
+                  </motion.div>
+
                   {navsocials.map((element, i) => (
                     <motion.div
                       className="my-2"
@@ -188,6 +209,16 @@ const Header = () => {
             </div>
           </Link>
         ))}
+        <a
+          href="https://drive.google.com/file/d/1bQQQ_rqIWk6bUuuek7hCXSBuCpzEm97a/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+          <motion.div whileHover={{ scale: 1.3 }}>
+            <FontAwesomeIcon icon={faFileInvoice} color="#ecce8e" size="xl" />
+          </motion.div>
+          <p className="text-sm"> Resume</p>
+        </a>
+
         <div className="absolute bottom-2 flex self-center gap-3">
           {navsocials.map((element, i) => (
             <motion.div
