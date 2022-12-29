@@ -78,7 +78,7 @@ const Header = () => {
   return (
     <div className="">
       {/* mobile  */}
-      <div className=" fixed w-full h-14 z-[100] bg-[#270722] xs:hidden w-full flex justify-between items-center">
+      <div className=" fixed h-14 z-[100] bg-[#270722] xs:hidden w-full flex justify-between items-center">
         <Link to="/">
           <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E]">
             <AnimateLogo />

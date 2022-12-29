@@ -37,14 +37,14 @@ export const data = [
   },
   {
     name: "Room.",
-    description: "a project dedicated to Home Décor and Furniture.",
+    description: "a Furniture website with a multifunctional collection for all styles and interests.",
     img: room,
     code: "https://github.com/Saif045/room",
     live: "https://room45.netlify.app/",
   },
   {
     name: "Best Eats",
-    description: "a simple food website.",
+    description: "Best Eats, a food delivery website that helps customers find the best foods.",
     img: foods,
     code: "https://github.com/Saif045/Best-Eats",
     live: "https://best-eats45.netlify.app/",

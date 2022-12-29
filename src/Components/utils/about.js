@@ -1,9 +1,3 @@
-export const first = `A passionate individual who always thrive to work on end to end
-products which develop sustainable and scalable social and technical
-systems to create impact. Interested in Remote Work`;
+export const first = `I am a self-taught web developer with a strong focus on front-end development. My determination and problem-solving skills, as well as my ability to think creatively, make me well-suited for a career in web development. In addition to my coding skills, I have a good sense of aesthetics and experience with responsive, mobile-first web design.`;
 
-export const second = `I’m not a designer but I have a good sense of aesthetics, and
-experience in responsive, mobile-first web design. I put special
-effort into optimizing my code and providing the best user
-experience. I would love to give you any kind of support also
-after the project's completion.`;
+export const second = `I am a dedicated and reliable professional who is always willing to go the extra mile to ensure that my projects are completed to the highest standard. I have experience in responsive design and am committed to delivering high-quality work. Check out my portfolio to see some of my previous projects and don't hesitate to contact me if you have any questions or would like to collaborate. contact@saifosama.co`;
