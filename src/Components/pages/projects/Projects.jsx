@@ -41,7 +41,7 @@ const Projects = () => {
         {data.map((site, i) => (
           <motion.div
             variants={item}
-            className="border border-[#ECCE8E] relative pb-12"
+            className="border border-[#ECCE8E] relative pb-10"
             key={i}>
             <div>
               <img className="w-full h-full" src={site.img} alt={site.name} />
