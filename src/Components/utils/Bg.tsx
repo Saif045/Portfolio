@@ -6,7 +6,7 @@ import ParticleImage, {
   forces,
   ParticleForce,
 } from "react-particle-image";
-import { s } from "../../assets/index";
+import { s  } from "../../assets/index";
 
 // Round number up to nearest step for better canvas performance
 const round = (n: number, step = 20) => Math.ceil(n / step) * step;
@@ -87,6 +87,7 @@ const Bg = () => {
       backgroundColor="ffffff00"
       className="  m-0 p-0 z-40 block w-full md:w-[50vw] h-[50vh] md:h-full"
     />
+    
   );
 };
 

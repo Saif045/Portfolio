@@ -24,3 +24,16 @@ span {
 canvas {
   touch-action: auto !important ;
 }
+
+.hero-btn {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+  background: #ecce8e;
+  color: #270722;
+  box-shadow: 0 0 5px #ecce8e, 0 0 25px #ecce8e, 0 0 50px #ecce8e,
+    0 0 200px #ecce8e;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
