@@ -8,16 +8,13 @@ const Hero = () => {
   let p1 = "Self Taught ".split("");
   let p2 = "Front-End".split("");
   let p3 = "React js Developer".split("");
-  
-
-  
 
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
+        staggerChildren: 0.08,
       },
     },
   };
@@ -37,7 +34,7 @@ const Hero = () => {
         initial="hidden"
         animate="show"
         className="pl-3 lg:pl-10 xl:pl-16 md:-mb-8 m-4 md:m-0  md:h-auto self-center md:order-first text-center md:text-left text-2xl sm:text-3xl lg:text-4xl ">
-        {[h1, p1, p2, p3 ].map((a, i) => (
+        {[h1, p1, p2, p3].map((a, i) => (
           <div key={i}>
             {a === " "
               ? "\u00A0"
@@ -48,13 +45,16 @@ const Hero = () => {
                 ))}
           </div>
         ))}
-        <a className="hero-btn p-2 xs:p-3 mt-2 xs:mt-3  w-full text-center text-base xs:text-lg sm:text-xl lg:text-2xl " href="#">
+        <motion.a
+          variants={item}
+          className="hero-btn p-2 xs:p-3 mt-2 xs:mt-3  w-full text-center text-base xs:text-lg sm:text-xl lg:text-2xl "
+          href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          Explore My Projects.
-        </a>
+          Explore My Projects
+        </motion.a>
       </motion.div>
     </div>
   );
