@@ -2,6 +2,7 @@ import React from "react";
 import TextSpan from "../../utils/TextSpan";
 import Bg from "../../utils/Bg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   let h1 = "hi i'm Saif".split("");
@@ -45,16 +46,17 @@ const Hero = () => {
                 ))}
           </div>
         ))}
-        <motion.a
-          variants={item}
-          className="hero-btn p-2 xs:p-3 mt-2 xs:mt-3  w-full text-center text-base xs:text-lg sm:text-xl lg:text-2xl "
-          href="#">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          Explore My Projects
-        </motion.a>
+        <Link to="Projects">
+          <motion.div
+            variants={item}
+            className="hero-btn p-2 xs:p-3 mt-2 xs:mt-3  w-full text-center text-base xs:text-lg sm:text-xl lg:text-2xl ">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Explore My Projects
+          </motion.div>{" "}
+        </Link>
       </motion.div>
     </div>
   );
