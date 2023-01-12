@@ -4,12 +4,12 @@ import rreact from "./React.webp";
 import room from "./room.webp";
 import SunnySide from "./SunnySide.webp";
 import Spotify from "./Spotify.webp";
+import Chat from "./Chat.webp";
 
 export const data = [
   {
     name: "Netflix Clone",
-    description:
-      "React ,TailwindCSS ,Vite and (TMDB) API.",
+    description: "React ,TailwindCSS ,Vite and (TMDB) API.",
     img: netflix,
     code: "https://github.com/Saif045/Netflix",
     live: "https://netflix-clone45.netlify.app/",
@@ -22,6 +22,14 @@ export const data = [
     live: "https://spotify45.netlify.app/",
   },
   {
+    name: "ChatApp",
+    description:
+      "React ,Vite ,Firebase ,MUI for login & signup and SCSS for chat.",
+    img: Chat,
+    code: "https://github.com/Saif045/ChatApp",
+    live: "https://chatapp45.netlify.app/",
+  },
+  {
     name: "React.",
     description: "React ,TailwindCSS ,Vite and Framer Motion",
     img: rreact,
@@ -30,14 +38,16 @@ export const data = [
   },
   {
     name: "SunnySide",
-    description: "React ,TailwindCSS ,Vite ,Framer Motion and Design Form Front-end Mentor",
+    description:
+      "React ,TailwindCSS ,Vite ,Framer Motion and Design Form Front-end Mentor",
     img: SunnySide,
     code: "https://github.com/Saif045/sunny-side",
     live: "https://sunny-side45.netlify.app/",
   },
   {
     name: "Room.",
-    description: "React ,TailwindCSS ,Vite ,Framer Motion and Design Form Front-end Mentor",
+    description:
+      "React ,TailwindCSS ,Vite ,Framer Motion and Design Form Front-end Mentor",
     img: room,
     code: "https://github.com/Saif045/room",
     live: "https://room45.netlify.app/",
