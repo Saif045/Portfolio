@@ -1,20 +1,23 @@
+import useWindowSize from "@rooks/use-window-size";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import useDarkSide from "./useDarkSide";
 
 export default function Switcher() {
   const [isDarkTheme, toggleTheme] = useDarkSide();
+  const { innerWidth, innerHeight } = useWindowSize();
 
   return (
     <>
       <DarkModeSwitch
-        className="self-center "
-        moonColor="#ecce8e"
-        sunColor="#270722"
+       
+        moonColor={Number(innerWidth) > 640 ? "#ecce8e" : "#000"}
+        sunColor={Number(innerWidth) > 640 ? "#270722" : "#000"}
         checked={isDarkTheme}
         onChange={toggleTheme}
         size={30}
       />
-      {isDarkTheme ? "Dark" : "Light"}
+
+      <span onClick={toggleTheme}>{isDarkTheme ? "Dark" : "Light"}</span>
     </>
   );
 }

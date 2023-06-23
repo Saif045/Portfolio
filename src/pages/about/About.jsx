@@ -16,17 +16,17 @@ const About = () => {
       <div className="container mx-auto px-2 grid h-[80vh]  ">
         <motion.div
           variants={item}
-          initial={{ x: 10, opacity: 0 }}
+          initial={{ x: -10, opacity: 0 }}
           animate="show"
-          className=" my-10 sm:my-auto sm:w-2/3  lg:w-1/2 p-4 self-center justify-self-end text-end">
+          className=" my-10 sm:my-auto sm:w-2/3  lg:w-1/2 p-4 self-center  ">
           <h1 className="text-xl mb-2">About Me</h1>
           <p>{first}</p>
         </motion.div>
         <motion.div
           variants={item}
-          initial={{ x: -10, opacity: 0 }}
+          initial={{ x: 10, opacity: 0 }}
           animate="show"
-          className="pb-10 sm:pb-10 sm:w-2/3  lg:w-1/2 m-4 self-center  ">
+          className="pb-10 sm:pb-10 sm:w-2/3  lg:w-1/2 m-4 self-center  justify-self-end text-end ">
           <div>
             <p>{second}</p>
           </div>

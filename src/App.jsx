@@ -1,7 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { freelanceData, personalData } from "./assets/data";
-import Header from "./Components/Header";
+import Header from "./Components/Header/Header";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Home from "./pages/home/Home";
@@ -15,7 +15,7 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-      
+
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}></Route>

@@ -9,7 +9,7 @@ import messenger from "./projectImgs/messenger.webp";
 import twitter from "./projectImgs/twitter.webp";
 import airbnb from "./projectImgs/airbnb.webp";
 
-import Spottify from "./projectImgs/Spottify.webp";
+import Spottify from "./projectImgs/spottify.webp";
 import Kanban from "./projectImgs/kanban.webp";
 import Tesla from "./projectImgs/tesla.webp";
 
@@ -124,9 +124,7 @@ export const freelanceData = [
         <a href="https://www.npmjs.com/package/react-spotify-web-playback">
           React-Spotify-Web-Playback
         </a>
-        <span className="ml-1">
-           and Spotify API.
-        </span>
+        <span className="ml-1">and Spotify API.</span>
       </div>
     ),
     img: Spottify,
@@ -155,16 +153,19 @@ export const freelanceData = [
   },
 ];
 
-
 export const first = `I am a self-taught web developer with a strong focus on front-end development. My determination and problem-solving skills, as well as my ability to think creatively, make me well-suited for a career in web development. In addition to my coding skills, I have a good sense of aesthetics and experience with responsive, mobile-first web design.`;
 
 export const second = `I am a dedicated and reliable professional who is always willing to go the extra mile to ensure that my projects are completed to the highest standard. I have experience in responsive design and am committed to delivering high-quality work. Check out my portfolio to see some of my previous projects and don't hesitate to contact me if you have any questions or would like to collaborate. contact@saifosama.co`;
 
 export const skills = [
   "React js",
+  "Next js",
   "HTML",
   "CSS",
+  "Typescript",
   "Javascript",
+  "Next Auth",
+  "Prisma",
   "TailwindCSS",
   "Framer Motion",
   "Git",
@@ -173,10 +174,50 @@ export const skills = [
   "Axios",
   "MUI",
   "SCSS",
-  "and REST APIs",
+  "REST APIs",
+  "Dnd-Kit",
+  "Pusher",
+  "MongoDb",
+  "Zustand",
+  "Cloudinary",
+  "Headlessui.",
 ];
-export const list = ["Next js", "Ts", "SSR"];
+export const list = ["DSA", "& Building Projects"];
 
-export const secondSkills = `I'm quiet confident, naturally curious, and perpetually working on
-improving my chops one design problem at a time. I guarantee a
-commitment during work on your project.`;
+
+
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHome,
+  faUser,
+  faEnvelope,
+  faSuitcase,
+  faGear,
+  faBusinessTime,
+} from "@fortawesome/free-solid-svg-icons";
+
+export const navsocials = [
+  { to: "https://github.com/Saif045", name: "Github", icon: faGithub },
+  {
+    to: "https://www.linkedin.com/in/saif-osama",
+    name: "Linkedin",
+    icon: faLinkedin,
+  },
+];
+
+export const navData = [
+  { to: "/", name: "Home", icon: faHome },
+  { to: "/contact", name: "Contact", icon: faEnvelope },
+  { to: "/about", name: "About", icon: faUser },
+  {
+    to: "/personal-projects",
+    name: "Personal Projects",
+    icon: faSuitcase,
+  },
+  {
+    to: "/freelance-projects",
+    name: "Freelance Projects",
+    icon: faBusinessTime,
+  },
+  { to: "/skills", name: "Skills", icon: faGear },
+];
