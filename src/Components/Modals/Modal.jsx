@@ -52,7 +52,7 @@ const Modal = ({ isOpen, onClose, children, fullwidth }) => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className={` bg-white p-10 rounded-lg  z-[150] relative h-auto w-full ${
+              className={` bg-white p-10 rounded-lg  z-[150] relative h-auto w-[90%] ${
                 !fullwidth && "max-w-[75%]"
               }`}
               ref={modalRef}>

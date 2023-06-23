@@ -30,13 +30,15 @@ const Contact = () => {
   };
 
   const container = {
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0, scale: 0.9 },
     show: {
       opacity: 1,
+      scale: 1,
       transition: {
         type: "easeIn",
 
-        staggerChildren: 0.3,
+        duration: 0.6,
+        delay: 0.2,
       },
     },
   };
