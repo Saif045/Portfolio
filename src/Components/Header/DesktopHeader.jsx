@@ -40,11 +40,7 @@ export const DesktopHeader = () => {
         </Link>
       ))}
 
-      <a
-        className="mb-2"
-        href="https://drive.google.com/file/d/1bQQQ_rqIWk6bUuuek7hCXSBuCpzEm97a/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer">
+      <a className="mb-2" href="/resume">
         <motion.div whileHover={{ scale: 1.3 }}>
           <FontAwesomeIcon
             icon={faFileInvoice}

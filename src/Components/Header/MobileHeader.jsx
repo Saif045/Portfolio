@@ -74,7 +74,7 @@ export const MobileHeader = () => {
         <AnimatePresence>
           {open && (
             <motion.aside
-              className="z-[100] h-screen bg-white absolute block right-0 top-0  "
+              className="z-[100] h-screen bg-white fixed block right-0 top-0  "
               ref={menuRef}
               initial={{ width: 0 }}
               animate={{
@@ -127,10 +127,7 @@ export const MobileHeader = () => {
                   variants={itemVariants}
                   onClick={cycleOpen}
                   whileHover={{ scale: 1.1 }}>
-                  <a
-                    href="https://drive.google.com/file/d/1bQQQ_rqIWk6bUuuek7hCXSBuCpzEm97a/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                  <a href="/resume" >
                     <FontAwesomeIcon icon={faFileInvoice} className="mr-3" />
                     Resume
                   </a>

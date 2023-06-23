@@ -10,8 +10,8 @@ export default function Switcher() {
     <>
       <DarkModeSwitch
        
-        moonColor={Number(innerWidth) > 640 ? "#ecce8e" : "#000"}
-        sunColor={Number(innerWidth) > 640 ? "#270722" : "#000"}
+        moonColor={Number(innerWidth) > 500 ? "#ecce8e" : "#000"}
+        sunColor={Number(innerWidth) > 500 ? "#270722" : "#000"}
         checked={isDarkTheme}
         onChange={toggleTheme}
         size={30}
