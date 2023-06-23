@@ -1,5 +1,5 @@
 import React from "react";
-import { skills, list, secondSkills } from "../../utils/skills";
+import { skills, list, secondSkills } from "../../assets/data";
 import { motion } from "framer-motion";
 
 const item = {

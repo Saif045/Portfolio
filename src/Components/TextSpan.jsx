@@ -1,11 +1,13 @@
 import { motion, useAnimationControls } from "framer-motion";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import useDarkSide from "./utils/useDarkSide";
 
 const TextSpan = ({ char }) => {
   const controls = useAnimationControls();
   const [isplaying, setIsPlaying] = useState(false);
+  const [isDarkTheme] = useDarkSide();
 
-  const rubberBand = () => {
+  const rubberBand = useCallback(() => {
     controls.start({
       transform: [
         "scale(1, 1)",
@@ -15,13 +17,14 @@ const TextSpan = ({ char }) => {
         "scale(.9, 1.05)",
         "scale(1, 1)",
       ],
-      color: "#DCA42E",
+      opacity:"0.7"
     });
     setIsPlaying(true);
-  };
+  }, [controls, isDarkTheme]);
 
   return (
     <motion.span
+      className=" "
       animate={controls}
       onMouseOver={() => {
         if (!isplaying) rubberBand();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import AnimateLogo from "./utils/AnimateLogo";
+import AnimateLogo from "./AnimateLogo";
 import useWindowSize from "@rooks/use-window-size";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -14,7 +14,10 @@ import {
   faClose,
   faGear,
   faFileInvoice,
+  faBusinessTime,
 } from "@fortawesome/free-solid-svg-icons";
+import Switcher from "./utils/Switcher";
+import useDarkSide from "./utils/useDarkSide";
 
 const Header = () => {
   const [open, cycleOpen] = useCycle(false, true);
@@ -36,9 +39,14 @@ const Header = () => {
     { to: "/contact", name: "Contact", icon: faEnvelope },
     { to: "/about", name: "About", icon: faUser },
     {
-      to: "/projects",
-      name: "Projects",
+      to: "/personal-projects",
+      name: "Personal Projects",
       icon: faSuitcase,
+    },
+    {
+      to: "/freelance-projects",
+      name: "Freelance Projects",
+      icon: faBusinessTime,
     },
     { to: "/skills", name: "Skills", icon: faGear },
   ];
@@ -77,12 +85,16 @@ const Header = () => {
       },
     },
   };
+
+  const [isDarkTheme] = useDarkSide();
+
+
   return (
     <div className="">
       {/* mobile  */}
       <div className=" absolute h-14 z-[80] xs:hidden w-full flex justify-between items-center">
         <Link to="/">
-          <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E]">
+          <div className="  text-4xl ml-4 mt-2 logo text-[#ECCE8E] ">
             <AnimateLogo />
           </div>
         </Link>
@@ -142,8 +154,7 @@ const Header = () => {
                         color="#4d4d4e"
                         className="mr-3"
                       />
-
-                   Resume
+                      Resume
                     </a>
                   </motion.div>
 
@@ -188,9 +199,9 @@ const Header = () => {
 
       {/* Desktop  */}
 
-      <div className="hidden xs:flex flex-col fixed top-0 left-0 w-20 h-screen text-center border-r border-[#ECCE8E]  ">
+      <div className="hidden xs:flex flex-col fixed top-0 left-0 w-20 h-screen text-center border-r  border-[#270722] dark:border-[#ECCE8E]">
         <Link to="/">
-          <div className=" mb-10 text-4xl  mt-2 logo text-[#ECCE8E]">
+          <div className=" mb-8 text-4xl  mt-2 logo text-[#270722] dark:text-[#ECCE8E]">
             <AnimateLogo />
           </div>
         </Link>
@@ -201,7 +212,7 @@ const Header = () => {
               <motion.div whileHover={{ scale: 1.3 }}>
                 <FontAwesomeIcon
                   icon={element.icon}
-                  color="#ecce8e"
+                  color={isDarkTheme ? "#ecce8e" : "#270722"}
                   size="xl"
                 />
               </motion.div>
@@ -209,15 +220,18 @@ const Header = () => {
             </div>
           </Link>
         ))}
+
         <a
+        className="mb-4"
           href="https://drive.google.com/file/d/1bQQQ_rqIWk6bUuuek7hCXSBuCpzEm97a/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer">
           <motion.div whileHover={{ scale: 1.3 }}>
-            <FontAwesomeIcon icon={faFileInvoice} color="#ecce8e" size="xl" />
+            <FontAwesomeIcon icon={faFileInvoice}   color={isDarkTheme ? "#ecce8e" : "#270722"} size="xl" />
           </motion.div>
           <p className="text-sm"> Resume</p>
         </a>
+        <Switcher />
 
         <div className="absolute bottom-2 flex self-center gap-3">
           {navsocials.map((element, i) => (
@@ -228,7 +242,7 @@ const Header = () => {
               <a href={element.to} target="_blank">
                 <FontAwesomeIcon
                   icon={element.icon}
-                  color="#ecce8e"
+                  color={isDarkTheme ? "#ecce8e" : "#270722"}
                   size="xl"
                 />
               </a>
@@ -241,3 +255,15 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* <DarkModeSwitch
+        className="self-center my-2"
+        moonColor="#ecce8e"
+        sunColor="#270722"
+        style={{ marginBottom: "2rem" }}
+        checked={darkSide}
+        onChange={toggleDarkMode}
+        size={30}
+      /> */
+}

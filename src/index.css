@@ -8,10 +8,9 @@
 html,
 body {
   position: relative;
-  color: #ecce8e;
   font-family: "Montserrat", sans-serif;
-  background: #270722;
   scroll-behavior: smooth;
+  font-weight: 500;
 }
 
 .logo {
@@ -25,7 +24,7 @@ canvas {
   touch-action: auto !important ;
 }
 
-.hero-btn {
+.hero-btn-darkTheme {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
@@ -35,5 +34,18 @@ canvas {
   color: #270722;
   box-shadow: 0 0 5px #ecce8e, 0 0 25px #ecce8e, 0 0 50px #ecce8e,
     0 0 200px #ecce8e;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.hero-btn-lightTheme {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+  background: #270722;
+  color: #ecce8e;
+  box-shadow: 0 0 5px #270722, 0 0 25px #270722, 0 0 50px #270722,
+    0 0 200px #270722;
   -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }

@@ -6,7 +6,16 @@ import ParticleImage, {
   forces,
   ParticleForce,
 } from "react-particle-image";
-import { s  } from "../../assets/index";
+
+import {
+  sDarkQ,
+  sLightQ,
+  sDarkC,
+  sLightC,
+  sDarkCk,
+  sLightCk,
+} from "../assets/S/index";
+import useDarkSide from "./utils/useDarkSide";
 
 // Round number up to nearest step for better canvas performance
 const round = (n: number, step = 20) => Math.ceil(n / step) * step;
@@ -54,16 +63,29 @@ const motionForce = (x: number, y: number): ParticleForce => {
   return forces.disturbance(x, y, 7);
 };
 
-const Bg = () => {
+const Shape = () => {
   const { innerWidth, innerHeight } = useWindowSize();
+  const [isDarkTheme] = useDarkSide();
 
   const options = useMemo(() => {
     return particleOptions;
   }, []);
 
+  function getRandomImport() {
+    const imports = [
+      [sDarkQ, sLightQ],
+      [sDarkC, sLightC],
+      [sDarkCk, sLightCk],
+    ];
+
+    const randomIndex = Math.floor(Math.random() * imports.length);
+    const selectedImport = imports[randomIndex][isDarkTheme ? 1 : 0];
+
+    return selectedImport;
+  }
   return (
     <ParticleImage
-      src={s}
+      src={getRandomImport()}
       width={
         Number(innerWidth) < 768 ? Number(innerWidth) : Number(innerWidth) / 2
       }
@@ -87,8 +109,7 @@ const Bg = () => {
       backgroundColor="ffffff00"
       className="  m-0 p-0 z-40 block w-full md:w-[50vw] h-[50vh] md:h-full"
     />
-    
   );
 };
 
-export default Bg;
+export default Shape;

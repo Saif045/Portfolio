@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { first, second } from "../../utils/about";
+import { first, second } from "../../assets/data";
 
 const About = () => {
   const item = {

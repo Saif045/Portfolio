@@ -1,11 +1,12 @@
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
+import { freelanceData, personalData } from "./assets/data";
 import Header from "./Components/Header";
-import About from "./Components/pages/about/About";
-import Contact from "./Components/pages/contact/Contact";
-import Home from "./Components/pages/home/Home";
-import Projects from "./Components/pages/projects/Projects";
-import Skills from "./Components/pages/skills/Skills";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import Home from "./pages/home/Home";
+import Projects from "./pages/projects/Projects";
+import Skills from "./pages/skills/Skills";
 import ScrollToTop from "./Components/utils/ScrollToTop";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
+      
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />}></Route>
@@ -22,7 +24,12 @@ function App() {
 
           <Route path="/contact" element={<Contact />}></Route>
 
-          <Route path="/projects" element={<Projects />}></Route>
+          <Route
+            path="/personal-projects"
+            element={<Projects data={personalData} />}></Route>
+          <Route
+            path="/freelance-projects"
+            element={<Projects data={freelanceData} />}></Route>
 
           <Route path="/skills" element={<Skills />}></Route>
         </Routes>
