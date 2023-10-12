@@ -8,12 +8,29 @@ import Chat from "./projectImgs/Chat.webp";
 import messenger from "./projectImgs/messenger.webp";
 import twitter from "./projectImgs/twitter.webp";
 import airbnb from "./projectImgs/airbnb.webp";
+import agency from "./projectImgs/agency.webp";
+import deplace from "./projectImgs/deplace.webp";
 
 import Spottify from "./projectImgs/spottify.webp";
 import Kanban from "./projectImgs/kanban.webp";
 import Tesla from "./projectImgs/tesla.webp";
 
 export const personalData = [
+  {
+    name: "Deplace",
+    description:
+      "Next 13 ,Typescript ,TailwindCSS ,Framer-motion ,react-fast-marquee",
+    img: deplace,
+    code: "https://github.com/Saif045/deplace",
+    live: "https://deplace-45.vercel.app/",
+  },
+  {
+    name: "Agency",
+    description: "Next 13 ,Typescript ,TailwindCSS ,Gsap ,Framer-motiom ,sass",
+    img: agency,
+    code: "https://github.com/Saif045/agency",
+    live: "https://agency-45.vercel.app/",
+  },
   {
     name: "Airbnb Clone",
     description:
@@ -183,8 +200,6 @@ export const skills = [
   "Headlessui.",
 ];
 export const list = ["DSA", "& Building Projects"];
-
-
 
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
