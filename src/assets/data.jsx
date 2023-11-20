@@ -112,63 +112,6 @@ export const personalData = [
   },
 ];
 
-const Video = ({ videoSrc }) => {
-  return (
-    <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
-      <iframe
-        src={videoSrc}
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
-        allowFullScreen
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-        }}></iframe>
-    </div>
-  );
-};
-export const freelanceData = [
-  {
-    name: "Spotify Clone",
-
-    description: (
-      <div>
-        Next 13 ,Typescript ,TailwindCSS ,Next Auth ,Redux-Toolkit ,Lyrics
-        Finder ,Intersection Observer ,
-        <a href="https://www.npmjs.com/package/react-spotify-web-playback">
-          React-Spotify-Web-Playback
-        </a>
-        <span className="ml-1">and Spotify API.</span>
-      </div>
-    ),
-    img: Spottify,
-    live: "https://spottify-test.vercel.app/",
-  },
-  {
-    name: "Tesla Clone",
-    description:
-      "React ,TailwindCSS ,Vite ,Intersection Observer and Framer Motion.",
-    img: Tesla,
-    live: "https://tesla45.netlify.app/",
-
-    video: (
-      <Video videoSrc="https://www.loom.com/embed/a9e8fe89237741cba08d17e8928cbdfe?sid=b5dd2901-be7f-4e63-9102-c97988fa92ee" />
-    ),
-  },
-
-  {
-    name: "Kanban Board",
-    description:
-      "React ,Firebase ,Dnd-Kit ,Typescript ,React-Firebase-Hooks and SCSS.",
-    img: Kanban,
-    video: (
-      <Video videoSrc="https://www.loom.com/embed/39255963592c4835983831585c1fc0e6?sid=023670f5-83d1-421b-b548-4c9f12a606fc" />
-    ),
-  },
-];
 
 export const first = `I am a self-taught web developer with a strong focus on front-end development. My determination and problem-solving skills, as well as my ability to think creatively, make me well-suited for a career in web development. In addition to my coding skills, I have a good sense of aesthetics and experience with responsive, mobile-first web design.`;
 

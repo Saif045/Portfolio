@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { Routes, Route, useLocation } from "react-router-dom";
-import { freelanceData, personalData } from "./assets/data";
+import {  personalData } from "./assets/data";
 import Header from "./Components/Header/Header";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
@@ -30,9 +30,7 @@ function App() {
           <Route
             path="/personal-projects"
             element={<Projects data={personalData} />}></Route>
-          <Route
-            path="/freelance-projects"
-            element={<Projects data={freelanceData} />}></Route>
+         
 
           <Route path="/skills" element={<Skills />}></Route>
         </Routes>
