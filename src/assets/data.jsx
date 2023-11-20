@@ -172,10 +172,6 @@ export const navData = [
     name: "Personal Projects",
     icon: faSuitcase,
   },
-  {
-    to: "/freelance-projects",
-    name: "Freelance Projects",
-    icon: faBusinessTime,
-  },
+
   { to: "/skills", name: "Skills", icon: faGear },
 ];
